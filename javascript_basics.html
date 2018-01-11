@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>
+        Title
+    </title>
+    <style>
+        *{
+            font-family:Ariel;
+            font-size: 18pt;
+        }
+    </style>
+    
+</head>
+<body>
+    <input id="todo"> <button id="btn">ADD</button>
+    <br>
+    <ul id="list">
+        <li>Task One</li>
+    </ul>
+    <script>
+        let todobox = document.getElementById("todo");
+        let addBtn = document.getElementById("btn");
+        let todolist = document.getElementById("list");
+        let starttime = new Date().getTime();
+        let endtime = new Date().getTime();
+        console.log(endtime-starttime);
+        addBtn.onclick = function(){
+            let todo = todobox.value;
+            // todolist.innerHTML +=
+            //             '<li>' + todo + '</li>';
+            // window.alert("hello " + todo);
+            let newtasklist = document.createElement('li');
+            newtasklist.innerText = todo;
+            todolist.appendChild(newtasklist);
+        }
+    </script>
+</body>
+
+</html>
